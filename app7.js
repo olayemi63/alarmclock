@@ -12,6 +12,23 @@ function = alarmClock(day, vacation) {alarmClock(1, false) -"7:00"}
 {alarmClock(5, false) -"7:00"} {alarmClock(6, true) -"off"}
 {alarmClock(6, false) -"10:00";} {alarmClock(4, true)-"10:00"}*/
 
+let alarmClock = document.getElementById('btn')
+
+let alarmTune = new Audio('/alarm-clock-short-6402.mp3')
+alarmClock.addEventListener('click',() =>{
+
+alarmTune.play()
+
+})
+
+let btnDismiss = document.getElementById('btnDismiss')
+
+btnDismiss.addEventListener('click',() =>{
+alarmTune.pause()
+alarmTune.currentTime = 0
+})
+
+
 let day = 4;
 let vacation = false;
 
